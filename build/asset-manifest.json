@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e9cba9b3.chunk.css",
+    "main.js": "/static/js/main.9c69b734.chunk.js",
+    "main.js.map": "/static/js/main.9c69b734.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.882bd34c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.882bd34c.js.map",
+    "static/js/2.8c7180fe.chunk.js": "/static/js/2.8c7180fe.chunk.js",
+    "static/js/2.8c7180fe.chunk.js.map": "/static/js/2.8c7180fe.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e9cba9b3.chunk.css.map": "/static/css/main.e9cba9b3.chunk.css.map",
+    "static/js/2.8c7180fe.chunk.js.LICENSE.txt": "/static/js/2.8c7180fe.chunk.js.LICENSE.txt",
+    "static/media/Mosaico_Logo.f8b68cd9.png": "/static/media/Mosaico_Logo.f8b68cd9.png",
+    "static/media/img-post-1.a13aacec.webp": "/static/media/img-post-1.a13aacec.webp",
+    "static/media/img-post-2.c6036395.webp": "/static/media/img-post-2.c6036395.webp",
+    "static/media/img-post-3.ec45254d.webp": "/static/media/img-post-3.ec45254d.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.882bd34c.js",
+    "static/js/2.8c7180fe.chunk.js",
+    "static/css/main.e9cba9b3.chunk.css",
+    "static/js/main.9c69b734.chunk.js"
+  ]
+}
