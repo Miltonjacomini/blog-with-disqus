@@ -2,6 +2,9 @@
   "name": "mosaico-disqus",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.14.0"
+  },
   "homepage": "https://miltonjacomini.github.io/blog-with-disqus",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -15,7 +18,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
