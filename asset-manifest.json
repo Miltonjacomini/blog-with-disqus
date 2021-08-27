@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/blog-with-disqus/static/css/main.e9cba9b3.chunk.css",
+    "main.js": "/blog-with-disqus/static/js/main.9c69b734.chunk.js",
+    "main.js.map": "/blog-with-disqus/static/js/main.9c69b734.chunk.js.map",
+    "runtime-main.js": "/blog-with-disqus/static/js/runtime-main.d3d43ef6.js",
+    "runtime-main.js.map": "/blog-with-disqus/static/js/runtime-main.d3d43ef6.js.map",
+    "static/js/2.8c7180fe.chunk.js": "/blog-with-disqus/static/js/2.8c7180fe.chunk.js",
+    "static/js/2.8c7180fe.chunk.js.map": "/blog-with-disqus/static/js/2.8c7180fe.chunk.js.map",
+    "index.html": "/blog-with-disqus/index.html",
+    "static/css/main.e9cba9b3.chunk.css.map": "/blog-with-disqus/static/css/main.e9cba9b3.chunk.css.map",
+    "static/js/2.8c7180fe.chunk.js.LICENSE.txt": "/blog-with-disqus/static/js/2.8c7180fe.chunk.js.LICENSE.txt",
+    "static/media/Mosaico_Logo.f8b68cd9.png": "/blog-with-disqus/static/media/Mosaico_Logo.f8b68cd9.png",
+    "static/media/img-post-1.a13aacec.webp": "/blog-with-disqus/static/media/img-post-1.a13aacec.webp",
+    "static/media/img-post-2.c6036395.webp": "/blog-with-disqus/static/media/img-post-2.c6036395.webp",
+    "static/media/img-post-3.ec45254d.webp": "/blog-with-disqus/static/media/img-post-3.ec45254d.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3d43ef6.js",
+    "static/js/2.8c7180fe.chunk.js",
+    "static/css/main.e9cba9b3.chunk.css",
+    "static/js/main.9c69b734.chunk.js"
+  ]
+}
