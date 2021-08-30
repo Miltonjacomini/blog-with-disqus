@@ -15,7 +15,7 @@ export default class Disqus extends Component {
         return (
             <div class="disqus-comments">
                 <DiscussionEmbed 
-                    shortname={this.article.shortname}
+                    shortname={this.props.article.shortname}
                     config={
                         {
                             url: this.props.article.url,
