@@ -5,7 +5,7 @@ export default function AboutUs() {
 
     var article = {
         title: "Página 3",
-        url: "https://mosi-disqus.herokuapp.com",
+        url: "https://mosi-disqus.herokuapp.com/about-us",
         identifier: "about-us",
         shortname: "samsung-q-a"
     }

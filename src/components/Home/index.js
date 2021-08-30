@@ -7,7 +7,7 @@ export default function Home() {
         title: "Página 1",
         url: "https://mosi-disqus.herokuapp.com",
         identifier: "homepage",
-        shortname: "q-a-poc"
+        shortname: "samsung-q-a"
     }
 
     return (

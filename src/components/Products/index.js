@@ -5,9 +5,9 @@ export default function Products() {
 
     var article = {
         title: "Página 2",
-        url: "https://mosi-disqus.herokuapp.com",
+        url: "https://mosi-disqus.herokuapp.com/products",
         identifier: "products",
-        shortname: "teste-milton"
+        shortname: "samsung-q-a"
     }
 
     return (
