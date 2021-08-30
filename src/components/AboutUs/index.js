@@ -5,8 +5,8 @@ export default function AboutUs() {
 
     var article = {
         title: "Página 3",
-        url: "https://miltonjacomini.github.io/email-landing",
-        identifier: "teste-milton-3"
+        url: "https://mosi-disqus.herokuapp.com",
+        identifier: "about-us"
     }
 
     return (

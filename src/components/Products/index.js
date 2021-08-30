@@ -5,8 +5,8 @@ export default function Products() {
 
     var article = {
         title: "Página 2",
-        url: "https://miltonjacomini.github.io/email-landing",
-        identifier: "teste-milton-2"
+        url: "https://mosi-disqus.herokuapp.com",
+        identifier: "products"
     }
 
     return (
