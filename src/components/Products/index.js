@@ -6,7 +6,8 @@ export default function Products() {
     var article = {
         title: "Página 2",
         url: "https://mosi-disqus.herokuapp.com",
-        identifier: "products"
+        identifier: "products",
+        shortname: "teste-milton"
     }
 
     return (

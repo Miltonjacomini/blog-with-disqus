@@ -6,7 +6,8 @@ export default function Home() {
     var article = {
         title: "Página 1",
         url: "https://mosi-disqus.herokuapp.com",
-        identifier: "homepage"
+        identifier: "homepage",
+        shortname: "q-a-poc"
     }
 
     return (
