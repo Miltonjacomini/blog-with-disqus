@@ -9,9 +9,6 @@ export default class Disqus extends Component {
 
     render() {
 
-        console.log("ARTICLE:");
-        console.log(this.props.article);
-
         return (
             <div class="disqus-comments">
                 <DiscussionEmbed 
