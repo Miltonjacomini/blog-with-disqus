@@ -1,0 +1,54 @@
+default:
+  tags:
+    - 'aws_x86'
+
+variables:
+  PROJECT_NAME: "squad-mar"
+  DOCKER_IMAGE_NAME: "409967641328.dkr.ecr.us-east-1.amazonaws.com/${PROJECT_NAME}/poc-disqus:latest"
+  AWS_ACCESS_KEY_ID: "${PROD_AWS_ACCESS_KEY_ID}"
+  AWS_SECRET_ACCESS_KEY: "${PROD_AWS_SECRET_ACCESS_KEY}"
+  AWS_DEFAULT_REGION: us-east-1
+
+before_script:
+  - set -e
+
+build:
+  image: 280917728158.dkr.ecr.us-east-1.amazonaws.com/ci/node:12.7.0-alpine
+  stage: build
+  script:
+    - npm install --silent 
+    - npm install react-scripts@3.0.1 -g --silent
+    - npm run build
+  artifacts:
+    paths:
+    - .build
+    expire_in: 1 week
+
+
+.deploy:
+  image:
+    name: 280917728158.dkr.ecr.us-east-1.amazonaws.com/ci/hashicorp/terraform:0.12.5
+    entrypoint: [""]
+  when: manual
+  stage: deploy
+  tags:
+    - aws_x86
+  script:
+    - cd infra/deployment/terraform
+    - terraform init
+    - terraform apply -var="docker_image_name=$BASE_DOCKER_IMAGE_TAG-$BRAND" -auto-approve
+  only:
+    - master
+    - main
+
+deploy development:
+  extends: .deploy
+  variables:
+    DOCKER_ENV_TAG: "dev"
+    VERSION: "0.0.1"
+    ECS_CLUSTER_NAME: squad-mar-dev
+  after_script:
+    - aws ecs update-service --cluster ${ECS_CLUSTER_NAME} --service ${DOCKER_ENV_TAG}-${PROJECT_NAME} --force-new-deployment
+  only:
+    - devel
+  when: on_success

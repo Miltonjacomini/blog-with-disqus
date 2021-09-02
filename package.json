@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "12.14.0"
+    "node": "^14.16.1"
   },
-  "homepage": "https://mosi-disqus.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -20,8 +19,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
+    "dev": "NODE_OPTIONS='--inspect' STAGE=${STAGE:-dev} FORCE_CLIENT_SIDE_FETCH=${FORCE_CLIENT_SIDE_FETCH:-false} BRAND=${BRAND:-mosaico} node server/ssr-server.js",
+    "build": "NEW_RELIC_NATIVE_METRICS_ENABLED=false STAGE=${STAGE:-dev} BUILD_TIME=true BRAND=${BRAND:-mosaico} react-scripts build",
+    "start": "STAGE=${STAGE:-dev} BRAND=${BRAND:-mosaico} NODE_ENV=dev -i ${VCPU:-1} node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
