@@ -24,6 +24,21 @@ build:
     - .build
     expire_in: 1 week
 
+.docker image:
+  image: 280917728158.dkr.ecr.us-east-1.amazonaws.com/ci/aws-cli-dind:latest
+  services:
+    - 280917728158.dkr.ecr.us-east-1.amazonaws.com/ci/docker:18.09-dind
+  stage: pre-deploy
+  tags:
+    - aws_x86
+  script:
+    - echo `aws ecr get-login --region us-east-1 --no-include-email` | sh
+    - if [ "$CI_COMMIT_REF_NAME" == "devel" ]; then BRANCH="dev"; else BRANCH="prod"; fi
+    - docker build -f ./infra/deployment/docker/Dockerfile -t $BASE_DOCKER_IMAGE_TAG:$BRANCH-$BRAND -t $BASE_DOCKER_IMAGE_TAG:$CI_PIPELINE_ID-$BRANCH-$BRAND .
+    - docker push $BASE_DOCKER_IMAGE_TAG:$BRANCH-$BRAND
+    - docker push $BASE_DOCKER_IMAGE_TAG:$CI_PIPELINE_ID-$BRANCH-$BRAND
+    - docker rmi $BASE_DOCKER_IMAGE_TAG:$BRANCH-$BRAND
+    - docker rmi $BASE_DOCKER_IMAGE_TAG:$CI_PIPELINE_ID-$BRANCH-$BRAND
 
 .deploy:
   image:
