@@ -3,10 +3,6 @@ import { DiscussionEmbed } from 'disqus-react';
 
 export default class Disqus extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
 
         return (
