@@ -9,14 +9,6 @@ provider "template" {
 
 terraform {
   required_version = ">= 0.12.5"
-
-  backend "s3" {
-    bucket         = "zoom-prod-s3-terraform-state-storage"
-    key            = "preprod/sherlock-search/v3/bondfaro"
-    region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "terraform-state-lock-dynamo"
-  }
 }
 
 variable "docker_image_name" {

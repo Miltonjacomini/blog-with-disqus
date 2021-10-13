@@ -7,7 +7,7 @@ export default function AboutUs() {
         title: "Página 3",
         url: "https://mosi-disqus.herokuapp.com/about",
         identifier: "about-us",
-        shortname: "samsung-q-a"
+        shortname: "preprod-zoom"
     }
 
     return (

@@ -7,7 +7,7 @@ export default function Products() {
         title: "Página 2",
         url: "https://mosi-disqus.herokuapp.com/products",
         identifier: "products",
-        shortname: "samsung-q-a"
+        shortname: "preprod-zoom"
     }
 
     return (
