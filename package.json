@@ -19,9 +19,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS='--inspect' STAGE=${STAGE:-dev} FORCE_CLIENT_SIDE_FETCH=${FORCE_CLIENT_SIDE_FETCH:-false} BRAND=${BRAND:-mosaico} node server.js",
-    "build": "STAGE=${STAGE:-dev} BUILD_TIME=true BRAND=${BRAND:-mosaico} npm run build",
-    "start": "STAGE=${STAGE:-dev} BRAND=${BRAND:-mosaico} NODE_ENV=dev -i ${VCPU:-1} node server.js",
+    "dev": "node server.js",
+    "build": "npm run build",
+    "start": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
